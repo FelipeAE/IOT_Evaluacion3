@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Registro de Incidentes"
+        android:textSize="24sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/tvDateTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Fecha y Hora: 01/01/2023 10:00 AM"
+        android:textSize="16sp"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinnerLab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDateTime"
+        android:layout_marginTop="15dp"
+        android:entries="@array/laboratory_names" />
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nombre de la Persona"
+        android:layout_below="@id/spinnerLab"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etRut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="RUT de la Persona"
+        android:layout_below="@id/etName"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:id="@+id/etIncidentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descripción del Incidente"
+        android:layout_below="@id/etRut"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnRecordIncident"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Grabar Incidente"
+        android:layout_below="@id/etIncidentDescription"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/btnViewIncidents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Incidentes Ingresados"
+        android:layout_below="@id/btnRecordIncident"
+        android:layout_marginTop="16dp" />
+
+</RelativeLayout>
